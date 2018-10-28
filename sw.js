@@ -36,28 +36,13 @@ self.addEventListener('install', event => {
   );
 });
 
-self.addEventListener('fetch', event => {
-  // handle file requests
+self.addEventListener('fetch', function(event) {
+  console.log(event.request.url);
+
   event.respondWith(
-    caches
-      .match(event.request)
-      .then(response => {
-        // check cache for requested file
-        return (
-          response ||
-          fetch(event.request).then(responseToFetch => {
-            // if in cache return, else if possible fetch from network
-            return caches.open(cacheName).then(cache => {
-              // if network available put file in cache for next time and return request
-              cache.put(event.request, responseToFetch.clone());
-              return responseToFetch;
-            });
-          })
-        );
-      })
-      .catch(function(error) {
-        console.log('files not cached', error);
-      })
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
   );
 });
 

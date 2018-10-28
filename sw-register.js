@@ -1,7 +1,7 @@
 if (navigator.serviceWorker) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/sw-register.js')
+      .register('/sw.js')
       .then(registration => {
         // Registration was successful
         console.log(
