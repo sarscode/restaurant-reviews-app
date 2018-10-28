@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Restaurant Info</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <!-- Beginning nav -->
+    <h1>Restaurant Reviews</h1>
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+  <!-- Beginning breadcrumb -->
+  <nav>
+    <ul id="breadcrumb">
+      <li><a href="./index.html">Home</a></li>
+    </ul>
+  </nav>
+  <!-- End breadcrumb -->
+
+  <!-- Beginning main -->
+  <main class="main-content">
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container" class="restaurant-container">
+      <h1 id="restaurant-name"></h1>
+      <div class="restaurant-detail">
+        <div class="restaurant-img-container">
+          <img id="restaurant-img">
+        </div>
+        <div class="restaurant-timings">
+          <p id="restaurant-cuisine" class="restaurant-cuisine"></p>
+          <table id="restaurant-hours" class="restaurant-hours"></table>
+        </div>
+      </div>
+      <!-- Beginning map -->
+      <div class="restaurant-map-container">
+        <p id="restaurant-address" class="restaurant-address"></p>
+        <div id="map"></div>
+      </div>
+      <!-- End map -->
+    </section>
+    <!-- end restaurant -->
+
+    <!-- Beginning reviews -->
+    <section id="reviews-container" class="reviews-container">
+      <ul id="reviews-list" class="reviews-list"></ul>
+    </section>
+    <!-- End reviews -->
+  </main>
+  <!-- End main -->
+
+  <!-- Beginning footer -->
+  <footer class="footer">
+    <p class="foot-note">
+      Copyright (c) 2018 <a href="#" class="copyright">Restaurant Reviews</a> All Rights Reserved.
+    </p>
+  </footer>
+  <!-- End of footer -->
+
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+
+  <!-- <script src="./sw-register.js"></script> -->
+  <script src="./js/dbhelper.js"></script>
+  <script src="./js/restaurant-info.js"></script>
+</body>
+
+</html>
