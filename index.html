@@ -6,10 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Restaurant Reviews App</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-
+  <header class="header">
+    <h1>Restaurant Reviews</h1>
+  </header>
+  <main class="main-content">
+    <section class="map-container">
+      <div id="map"></div>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <div>
+          <select id="neighborhoods-select" name="neighborhoods">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select id="cuisines-select" name="cuisines">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <section>
+      <ul id="restaurants-list" class="restaurants-list"></ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="foot-note">
+      Copyright (c) 2018 <a href="#" class="copyright">Restaurant Reviews</a> All Rights Reserved.
+    </p>
+  </footer>
 </body>
 
 </html>
